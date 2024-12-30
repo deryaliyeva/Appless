@@ -188,13 +188,13 @@ section{
     object-fit: contain;
 }
 .all_img{
-    height: 250px;
+    height: 300px;
 }
 .all_cards{
     display: flex;
-    justify-content: center;
-    padding: 20px 0;
-    flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 20px 0;
 }
 .app_models .spans{
     color: #bf4800;
@@ -686,7 +686,7 @@ ol{
     }
     .all_art{
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
     }
     .ios_img{
@@ -712,6 +712,10 @@ ol{
     .introducing{
         display: flex;
         align-items: center;
+    }
+    .one_card{
+        width: 25%;
+        padding: 0 10px;
     }
     .applications{order: -1;}
     .one_apple{height: 50px;}
@@ -753,14 +757,11 @@ ol{
     }
 }
 
-
-
 @media only screen and (min-width: 950px) {
     .row{
         display: flex;
+        align-items: center;
         justify-content: space-between;
     }
-    .col1{width: 33.33%;}
-    .col{width: 33.33%;}
     .img_cards{width: 33.33%;}
 }
