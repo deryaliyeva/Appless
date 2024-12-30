@@ -756,7 +756,11 @@ ol{
         width: 25%;
     }
 }
-
+@media only screen and (min-width: 369px) {
+    .one_card{
+      width: 50%;
+    }
+}
 @media only screen and (min-width: 950px) {
     .row{
         display: flex;
