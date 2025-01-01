@@ -1,69 +1,94 @@
-.bggray{
-    background: #f2f2f2;
-    padding: 23px 15px;
+:root{
+    --gray:#f2f2f2;
+    --blue:#0071e3;
 }
-.bgwhite{background: #fff;}
-.bgblack{background: #000;}
+.container{
+    padding:0 3%;
+}
+.txtblack{color: #000;}
+.bg-gray{
+    background-color: var(--gray);
+    text-align: center;
+}
+.bg-white{background-color:#fff;
+    border-left: 20px solid #fff;
+    border-right: 20px solid #Fff;;}
+
 nav{
+    background-color:var(--gray) ;
     display: flex;
-    align-items: center;
-    flex-wrap: wrap;
     justify-content: space-between;
+    padding: 25px 12px;
 }
-nav a img{
-    width: 23px;
-    padding: 0 4px;
+#nav a, nav a i{
+    color: #000;
 }
-.nav_inp label{padding: 0 4px;}
-.menu1{display: none;}
-.sidebar {
-    transition: .5s;
-    background-color: white;
-    position: fixed;
-    left: -100%;
-    right: 0;
-    top: 0;
-    bottom: 0;
+.apple_logo{
+    width: 15px;
+}
+#nav_div label{
+    display:inline-block;
+    padding:0;
+}
+.side {
     width: 100%;
-    height: 100vh;
+    background: #fff;
+    position: fixed;
+    padding: 30px;
+    left: -100%;
+    top: 0;
+    bottom:0;
+    text-align: left;
+    bottom: 0;
+    transition: .4s;
+    font: 1em 'Arial', sans-serif;
 }
-.menu2{padding: 40px 30px;}
-.menu2 li{padding: 8px;}
-.menu2 li a{
-    color: black;
-    font: 500 1.2em 'Arial', sans-serif;
+#sidebar{padding:60px 0 0 0;}
+#sidebar li {
+    padding: 10px 0;
+
+    a {
+        color: #000;
+        opacity: .9;
+        font: 1em 'Arial', sans-serif;
+    }
 }
-.sidebar .check{
+.label_div {
     text-align: right;
-    padding: 25px 20px 0 0;
-    text-align: right;
-    font-size: 1em;
+    color: #000 ;
+    font: 1em 'Arial', sans-serif;
 }
-#input {display: none;}
-#input:checked ~ .sidebar{
+input {
+    display: none;
+}
+input:checked~ .side{
     left: 0;
 }
-.bgwhite .container{
-    max-width: 1090px;
-}
-.imgs{
+#tels{
     display: flex;
     justify-content: space-between;
     overflow-x: scroll;
     gap: 20px;
+    div{
+        padding: 10px;
+        text-align: center;
+    }
 }
-.imgs div{
-    padding: 10px;
+.new{
     text-align: center;
+    .minip,h6{
+        color:#bf4800;
+        padding: 0 0 5px 0;
+        font: .7em 'Arial', sans-serif;
+    }
+    h6{
+        color:#000;
+    }
 }
-.imgs div p, .imgs div .spans{ font: .7em 'Arial', sans-serif;}
-.imgs div .spans{color: #bf4800;}
-.imgs::-webkit-scrollbar{display: none;}
-.p_div{text-align: center;}
-.p_div p{
-    font: 400 1.3em 'Arial', sans-serif;
-}
-.a_div a{
+#bg-black p{
+    color:#fff;
+   }
+   .a_div a{
     font: 400 1em 'Arial', sans-serif;
     color: #0071e3;
 }
@@ -93,30 +118,258 @@ nav a img{
       width: 100%;
     }
 }
-
-
-.sec_div .spans{
-    color: #bf4800;
-    font: .8em 'Arial', sans-serif;
+#tels::-webkit-scrollbar{
+    display: none;
 }
-section{
-    padding: 40px 0;
+#news{
+    padding: 23px 10px 22px;
     text-align: center;
+    background-color: var(--gray);
+    p{
+        font: 1.3em 'Arial', sans-serif;
+        color:#000;
+    }  
+    a{
+        display: inline-block;
+        padding-top: 10px;
+    }
+    a i{
+        padding-left: 10px;
+    }
 }
-.sec1_h6{
-    color: #8b887eff;
+.bluea{
+    display: inline-block;
+    color:var(--blue);
+    margin: 15px 0;
+
+}
+#nav{display: none;}
+#bg-black, #sec_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    padding: 30px 0;
+}
+#sec_div{background-color: #fff;}
+#bg-black h5{
+    color:#848178;
     font: 1em 'Arial', sans-serif;
-    margin: 10px;
 }
-.from_div{
+#sec_div h5{
+    color:#000;
+    font: 1em 'Arial', sans-serif;
+}
+h1{
+    font: 300 2em 'Arial', sans-serif;
+    padding: 22px 0 15px;
+}
+#titantxt{
+    background:url('../img/titanium.jpeg') center/contain no-repeat;
+    margin: 20px;
+    max-width: 220px;
+    height: 40px;
+    width: 100%;
+}
+.bluelink{
+    color:var(--blue);
+}
+#titanimg{
+    background:url('../img/titanium-mobile.jpeg') center/contain no-repeat;
+    max-width: 300px;
+    width: 100%;
+    height: 50vh;
+    margin-top: 30px;
+}
+.section_p{
     font: .9em 'Arial', sans-serif;
     color: #fff;
+    text-align: center;
+}
+#imgsbg{
+    background: url('../img/newphoria.jpeg') center/contain no-repeat;
+    margin: 10px;
+    width: 100%;
+    height: 20vh;
+}
+#sec2_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfbfd;
+    padding: 30px 0;
+    h5{
+        color:#000;
+        font: 1em 'Arial', sans-serif;
+    }
+}
+#iphonesec2{
+    background: url(../img/lovebg.jpeg) center/contain no-repeat;
+    height: 50vh;
+    width: 100%;
+    margin: 10px;
+}
+#info_id{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;  
+}
+#sec2_div h1{
+    line-height: 1.7em;
+    font-weight: 700;
+    text-align: center;
+    color: #1e3791;
+}
+.sectionredp{
+    color:#bf4800 !important;
+    padding: 10px 0;
+    font: .9em 'Arial', sans-serif;
+}
+#bg_div{
+    background-color: #fff;
+    padding: 20px 20px 30px 20px;
+    text-align: center;  
+}
+#person_div{
+    background: url('../img/applebg12.jpeg') center/cover no-repeat;
+    height: 50vh;
+    margin-bottom: 40px;
+}
+#uptext{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h2{
+        font: 1.4em 'Arial', sans-serif;
+        padding: 22px 0;
+    }
+    p{
+        font: 1.8em 'Arial', sans-serif;
+        line-height: 1.5em;
+    }
+    a{
+        font: .9em 'Arial', sans-serif;
+        color: var(--blue);
+        padding: 15px 0;
+    }
+}
+#persontext{
+    display: none;
+}
+#bg_div h1{
+    text-align: center;
+    padding: 20px 0;
+    font: bold 2em 'Arial', sans-serif;
+}
+.features_div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+  .features_div  hr {
+    width: 60%;
+    margin: auto;
+    margin-block: 20px;
+  }
+  .about_img {
+    height: 300px;
+    padding: 0 10px;
+  }
+  .phoneimg {
+    height: 85%;
+    width: 100%;
+    object-fit: contain;
+    padding: 20px 0 10px;
+  }
+  .info_class p:nth-of-type(1) {
+    margin: 10px 0;
+    font: bold 1em 'Arial', sans-serif;
+  }
+  .info_class p:nth-of-type(2) {
+    margin: 10px 0 0 0;
+    font: .8em 'Arial', sans-serif;
+  }
+  .info_class p:nth-of-type(3) {
+    margin: 10px 0 0 0;
+    font: .8em 'Arial', sans-serif;
+  }
+  .settings div {
+    padding: 20px 0;
+  }
+  .settings img {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+  }
+  .settings p {
+    width: 145px;
+    margin: auto;
+    font: .7em / 2 'Arial', sans-serif;
+  }
+#card_div{
+    padding: 40px 10px;
+    width: 100%;
+    
+    h2{
+        text-align: center;
+        padding: 20px;
+        font: 500 1.8em 'Arial', sans-serif;
+    }
+}
+.card{
+    background-color: #fff;
     margin: 15px 0;
 }
-.titanium{
-    background: url('../img/titanium.jpeg') center/contain no-repeat;
-    min-height: 45px;
-    padding: 15px 0;
+
+#onecard_div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    p{
+        color: #6e6e73;
+    }
+    h4{
+        font: 1.5em 'Arial', sans-serif;
+        padding: 30px;
+    }
+}
+#card2p{
+    font: .9em 'Arial', sans-serif;
+    color: #000;
+    padding-bottom: 30px;
+}
+#airdrop{
+    background:url('../img/savei_phone.jpg') center/contain no-repeat;
+    height: 30vh;
+}
+#emogy{
+    background: url('../img/appleemoji.jpeg') center/contain no-repeat;
+    height: 20vh;
+}
+#applepay{
+    background:url('../img/aplepphone.jpeg') center/contain no-repeat;
+    height: 30vh;
+}
+.why{
+    background-color: #fff;
+    text-align: center;
+    margin: 20px 10px;
+    h1{
+        font: bold 2em 'Arial', sans-serif;
+        margin: 20px 10px;
+    }
+    p{padding:0 10px;}  
+}
+#whybg_div{
+    background:url('../img/applebg6.jpeg') right/cover no-repeat;
+    height: 25vh;
 }
 .button{
     display: inline-block;
@@ -127,444 +380,321 @@ section{
     color: #fff;
     border-radius: 30px;
 }
-.bgtitanium{
-    background: url('../img/titanium-mobile.jpeg')center/contain no-repeat;
-    height: 50vh;
-    margin: 10px 0;
-}
-.sec2_h6{
-    font: 400 1.1em 'Arial', sans-serif;
-    color: #000;
-    margin: 10px;
-}
-.sec_div h2{
-    font: 500 1.8em / 0.8 'Arial', sans-serif;
-    margin: 20px 0;
-}
-.from_div2{
-    font: .9em 'Arial', sans-serif;
-    color: #000;
-    margin: 15px 0;
-}
-.new{
-    background: url('../img/newphoria.jpeg') center/contain no-repeat;
-    height: 20vh;
-    padding: 10px;
-}
-.bggrays{
-    background: #fbfbfb;
-}
-.power h1{
-    color: #1e3791;
-    font: bold 2em 'Arial', sans-serif;
-    margin: 20px 0;
-}
-.power .from_div2{font-size: 1.2em;}
-.phones{
-    background: url('../img/lovebg.jpeg') center/contain no-repeat;
-    height: 50vh;
-}
-.app_text h4{   font: 600 1.4em 'Arial', sans-serif;}
-.app_text h2{
-    font: 1.8em 'Arial', sans-serif;
-    margin: 20px;
-}
-.app_text .watch{
-    margin: 10px 0;
-    padding: 8px 20px;
-    display: inline-block;
-    border-radius: 15px;
-    color: #0071e3;
-    font: .8em 'Arial', sans-serif;
-}
-.bgapple{
-    background: url('../img/applebg12.jpeg') center/cover no-repeat;
-    height: 50vh;
-}
-.whichs {
-    font: 2em 'Arial', sans-serif;
-    margin: 20px 0;
-}
-
-.allappcard {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 20px 0;
-}
-
-.appcard {
-    flex: 0 1 220px;
-}
-
-.iphonesimg {
-    height: 300px;
-    padding: 0 10px;
-}
-
-.iphonesimg img:first-child {
-    width: 100%;
-    height: 85%;
-    object-fit: contain;
-    padding: 20px 0 10px 0;
-}
-
-.iphonetext span {
-    font: .8em 'Arial', sans-serif;
-    color: #bf4800;
-}
-
-.iphonetext p:nth-of-type(1) {
-    margin: 10px 0;
-    font: .8em 'Arial', sans-serif;
-}
-
-.iphonetext p:nth-of-type(2) {
-    font: .8em 'Arial', sans-serif;
-    margin: 20px 0 0 0;
-}
-.iphonetext h4{
-    font: 700 1.1em 'Arial', sans-serif;
-    margin: 20px 0 0 0;
-}
-.appcard hr {
-    width: 60%;
-    height: 1px;
-    margin: auto;
-    background: #000;
-}
-
-.text div {
-    padding: 20px 0;
-}
-
-.text p {
-    font: .7em 'Arial', sans-serif;
-    padding: 0 8px;
-    line-height: 25px;
-}
-
-.text img {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-}
-section h2{
-    font: 500 1.8em 'Arial', sans-serif;
-    margin: 20px 0;
-}
-.col{
-    margin: 15px;
-    padding: 10px;
-    background: #fff;
-}
-.col h5{
-    padding: 30px;
-    font: bold 1.5em 'Arial', sans-serif;
-}
-.art1_img{
-    background: url('../img/savei_phone.jpg') center/contain no-repeat;
-    height: 30vh;
-}
-.art2_img{
-    background: url('../img/appleemoji.jpeg') center/contain no-repeat;
-    height: 20vh;
-}
-.col p{
-    font: 400 1em 'Arial', sans-serif;
-    margin: 0 10px;
-    line-height: 20px;
-    color: #6e6e73;
-}
-.art3_img{
-    background: url('../img/aplepphone.jpeg') center/contain no-repeat;
-    height: 30vh;
-    margin: 15px 0 0 0;
-}
-.why{
-    background: #fff;
-    margin: 20px 10px;
-    padding: 30px 15px;
-}
-.why p{
-    font: 400 1em 'Arial', sans-serif;
-    line-height: 20px;
-}
-.whybg{
+#whyimgs{
+    background:url('../img/applebg9.jpeg') center/contain no-repeat;
     height: 25vh;
-    background: url("../img/applebg6.jpeg") left/cover no-repeat;
+    width: 100%;
+
 }
-.macsafe_p h2{
-    font: bold 2em 'Arial', sans-serif;
-    margin: 20px 0 30px 0;
-}
-.macsafe_p p{
-    font: 400 1.1em 'Arial', sans-serif;
-    margin: 15px auto;
-    line-height: 30px;
-    max-width: 300px;
-}
-.macsafe_img{
-    background: url('../img/applephones.jpeg') center/contain no-repeat;
-    height: 30vh;
-    margin: 30px 0;
-}
-.macsafe{
-    background: #fff;
-    margin: 20px 10px;
-    padding: 10px;
-}
-.airtag_p h2{
-    font: bold 2em 'Arial', sans-serif;
-    margin: 20px 0 30px 0;
-}
-.airtag_p p{
-    font: 400 1.1em 'Arial', sans-serif;
-    margin: 15px auto;
-    line-height: 18px;
-    max-width: 370px;
-}
-.airtag_img{
-    background: url('../img/airtag__b81h4czx41yq_medium.jpg') center/contain no-repeat;
-    height: 30vh;
-    margin: 30px 0;
-}
-.airtag{
-    background: #fff;
-    margin: 20px 10px;
-    padding: 10px;
-}
-.magic_p h2{
-    font: bold 2em 'Arial', sans-serif;
-    margin: 20px 0 30px 0;
-}
-.magic_p p{
-    font: 400 1.1em 'Arial', sans-serif;
-}
-.magicruns_img{
-    background: url('../img/applebg9.jpeg') center/contain no-repeat;
-    height: 20vh;
-    margin: 30px 0;
-}
-.magicruns{
-    background: #fff;
-    margin: 20px 10px;
-    padding: 10px;
-}
-.img_cards{padding: 30px 10px;}
-.img_cards h5{
-    font: bold 1.3em 'Arial', sans-serif;
-    padding: 15px 0;
-}
-.img_cards p{
-    font: 400 1em 'Arial', sans-serif;
-    max-width: 370px;
-    margin: auto;
-}
-.all_ios{
-    background: #fff;
-    margin: 20px 10px;
-    padding: 10px;
-}
-.ios17 h5{ 
-    font: 500 1.8em 'Arial', sans-serif;
+#featured{
+    text-align: center;
+    font: 600 2em 'Arial', sans-serif;
     margin: 20px 0;
 }
-.ios17 p{font: 400 1em 'Arial', sans-serif;}
-.two_cards{
-    background: #fff;
-    margin: 20px 10px;
-    padding: 10px;
-}
-.tels{background: url('../img/applebg.jpeg') center/cover no-repeat;}
-.user{background: url('../img/privacy.jpg') center/cover no-repeat;}
-.tels, .user{
-    margin: 10px 0;
-    height: 40vh;
-}
-.one_apple{
-    background: url('../img/apple_one.jpg') center/contain no-repeat;
-    height: 40px;
-}
-.appleone{
-    background: #fff;
-    margin: 20px 10px;
-    padding: 10px;
-}
-.appleone p{
-    font: 500 1.4em 'Arial', sans-serif;
-    margin: 20px 0;
-}
-.newtwo_cards{
-    background: #000;
-    margin: 20px 10px;
-    padding: 10px;
-}
-.newtwo_cards h2, .newtwo_cards p{
-    color: #fff;
-}
-.newtwo_cards p, .newtwo_white p{
-    font: 500 1.4em 'Arial', sans-serif;
-    margin: 20px 10px;
-}
-.newtwo_white{
-    background: #fff;
-    margin: 20px 10px;
-    padding: 10px;
-}
-.bgtv{
-    background: url('../img/tv-_bg.png') center / cover no-repeat;
-    height: 40vh;
-    margin: 10px 0;
-}
-.bgmusic{
-    background: url('../img/music_bg.jpg') center / cover no-repeat;
-    height: 40vh;
-    margin: 10px 0;
-}
-.fitness{
-    background: url('../img/fitness_bg.jpg') center / cover no-repeat;
-    margin: 10px 0;
-    height: 40vh;
-}
-.arcade{
-    background: url('../img/arcade_bg.png') center / cover no-repeat;
-    margin: 10px 0;
-    height: 40vh;
-}
-.news{
-    background: url('../img/news_bg.jpeg') center / cover no-repeat;
-    margin: 10px 0;
-    height: 40vh;
-}
-.gift{
-    background: url('../img/gift_bg.jpg') center / cover no-repeat;
-    margin: 10px 0;
-    height: 40vh;
-}
-.introbg{
-    background: url('../img/research_app.jpg') center / contain no-repeat;
-    height: 30vh;
-    margin: 30px 0;
-}
-.introducing{
-    background: #fff;
-    margin: 20px 10px;
-    padding: 10px;
-}
-.introducing_p p{
-    font: 500 1.1em 'Arial', sans-serif;
-    margin: 20px 10px;
-}
-.p_sec{
-    padding: 20px 0;
-    font: .9em 'Arial', sans-serif;
-    color: #0000007a;
-    text-align: justify;
-}
-ol{
-    padding: 0 0 30px 30px;
-    li {
-      padding: 0;
-      list-style: decimal;
+.featured{margin-bottom:20px;}
+.mac_div{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #fff;
+    margin: 20px 20px 30px;
+    h2{
+        font: 600 1.8em 'Arial', sans-serif;
+        padding:20px 0 30px 0;
+
+    }
+    p{
+        max-width: 300px;
+        margin: 15px auto;
+        font: 1.1em / 1.7 'Arial', sans-serif;
+    }
+    #macimg{
+        background:url('../img/applephones.jpeg') center/contain no-repeat;
+        height: 30vh;
+        margin: 30px 0;
     }
 }
-.container{
-    padding: 0 3%;
+#keys{
+    background:url('../img/appleanahtarlik.jpeg') center/contain no-repeat;
+    height: 30vh;
+    margin: 30px 0;
 }
-.foot_logo{padding: 16px 30px;}
-.foot_menu{padding: 0 30px;}
-.foot_logo a{
+.center{
+    text-align: center;
+    margin: auto;
+    justify-content: center;
+}
+#threesection{padding:15px 0;}
+#fast_div{
     display: flex;
-    align-items: center;
-    gap: 40px;
+    flex-direction: column;
 }
-.foot_logo a .fa-apple{
+.delivery_div{
+    padding: 15px 10px;
+    p{
+    font: 400 1em 'Arial', sans-serif;
+    max-width: 500px;
+    margin: auto;
+}
+h3{
+    font: 1.3em 'Arial', sans-serif;
+    padding: 15px 0;
+}
+}
+#ios17_div{
+    display: flex;
+    flex-direction: column;
+    p{
+        font: 400 1em 'Arial', sans-serif;
+    }
+}
+.switching{
+    background-color: #fff;
+}
+#switchbg{
+    background:url('../img/applebg.jpeg') center/contain no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+#privacybg{
+    background: url('../img/privacy.jpg') center/contain no-repeat;
+    width: 100%;
+    height: 40vh;
+}
+#addbg{
+    background:url('../img/ios17.jpg') center/cover;
+    width: 100%;
+    height: 45vh;
+}
+.switching1,.switching2,.switching3{width:100%;}
+.switching4{
+    display: none !important;
+}
+#sec4_div h1,#more h1{
+    font: bold 2em 'Arial', sans-serif;
+    padding: 60px 0 20px 0;
+}
+
+.switching{
+    background: #fff;
+    margin: 20px 0;
+    width: 100%;
+    
+    h2{
+        font: 500 1.8em 'Arial', sans-serif;
+        padding:20px 0;
+    }
+}
+.switching1{display: block !important;}
+#application_div{
+    background-color: #fff;
+    padding: 10px 30px;
+    width: 100%;
+    margin: 10px 0px;
+}
+#application_div a{margin:10px 5px;}
+#application_div img{
+    display: inline-block;
+    height: 40px;
+}
+#application_div p{
+    font: 1.4em 'Arial', sans-serif;
+    padding: 20px 0;
+}
+.dark_div, .white_card{
+    background-color: #000;
+    width: 100%;
+    padding: 15px 10px;
+    margin: 10px 0px;
+    p{
+        color:#fff;
+        font: 1.8em 'Arial', sans-serif;
+    }
+    a{
+        margin: 30px 5px;
+    }
+}
+.white_card{
+    background-color: #fff;
+    p{
+        color:#000;
+    }
+}
+
+.dark_p{  font: 1.4em 'Arial', sans-serif !important;}
+.appleicon{
+    color:white;
+    font: 2em 'Arial', sans-serif !important;
+    padding: 10px 0;
+}
+.fa-apple{
     font-size: 1.5em;
-    padding: 0 10px;
-    color: #000;
 }
-.foot_logo span{
-    color: #000000bd;
+#dark1bg{
+    background: url('../img/tv-_bg.png') center/cover;
+    height: 40vh;
+    margin: 10px 0;
+    width: 100%;
+}
+#dark2bg{
+    background: url('../img/music_bg.jpg') center/cover;
+    height: 40vh;
+    margin: 10px 0;
+    width: 100%;
+}
+#white_div{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+}
+.white_card{width:100%;}
+#white1bg{
+    background: url('../img/fitness_bg.jpg') 50% 70%/cover no-repeat;
+    height: 40vh;
+    margin: 10px 0;
+    width: 100%
+}
+#white2bg{
+    background: url('../img/arcade_bg.png') center/contain no-repeat;
+    height: 50vh;
+    margin: 10px 0;
+    width: 100%;
+}
+#white3bg{
+    background: url('../img/news_bg.jpeg') 50% 70%/cover no-repeat;
+    height: 40vh;
+    margin: 10px 0;
+    width: 100%;
+}
+#white4bg{
+    background: url('../img/gift_bg.jpg')  50% 90%/cover no-repeat;
+    height: 40vh;
+    margin: 10px 0;
+    width: 100%;
+}
+#wh_div{display: none;}
+#introducing{
+    margin-bottom: 30px ;
+    padding: 25px 10px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    h2{
+        font: 500 1.8em 'Arial', sans-serif;
+        padding:15px 0;
+
+    }
+    p{
+        max-width: 300px;
+        margin: 15px auto;
+        font: 1.1em 'Arial', sans-serif;
+    }
+}
+#introducingbg{
+    background: url('../img/research_app.jpg')  center/contain no-repeat;
+    height: 30vh;
+    margin: 30px 0;
+
+}
+#footbg{
+    background-color:#fff;
+    padding: 20px 0;
     font: .9em 'Arial', sans-serif;
 }
-.foot_ul{  
-    max-height: 1px;
-    overflow: hidden;
-    cursor: pointer;
-    transition: .4s;
+#footer_p{opacity:.5}
+#footer_p{
+    text-align: justify;
 }
-.foot_ul{
-    border-bottom: 1px solid #bebebe7a;
+.hr_1{
+    opacity:.5;
+    border: .1px solid #000;
+    margin: 30px 0;
 }
- .foot_ul li{
-    padding: 3px 10px;
-    color: #0000007a;
+ol {
+    padding-left: 30px;
 }
-.foot_ul li a{
-    color: #000000bd;
+#footerbg {
     font: .8em 'Arial', sans-serif;
-    transition: .4s;
+    color: #000000c3;
+  }
+#footerbg p {
+    margin: 20px 0;
+  }
+#footlink a span{
+    font: 1.2em 'Arial', sans-serif;
+    color: #000;
 }
-.foot_menu label {
-    color: #000000bd;
-    padding: 20px 10px;
-    font: .8em 'Arial', sans-serif;
+
+  #footlink a {
+    display:inline-flex;
+    align-items: center;
+    gap: 40px;
+  }
+  #footerbg .fa-apple {
+    font-size: 1.8em;
+    color: #000;
+  }
+  .footermenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .footermenu div {
+    border-bottom: 1px solid #dee2e6 ;
+  }
+  .footermenu div:nth-last-of-type(1) {
+    border-bottom: none;
+  }
+  label {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-.foot_menu label a{
-    color: #000000bd;
-    font: .9em 'Arial', sans-serif;
-}
-
-#inp1, #inp2, #inp3, #inp4, #inp5, #inp6, #inp7, #inp8, #inp9, #inp10, #inp11{
-    display: none;
-}
-#inp1:checked~.foot_ul,
-#inp2:checked~.foot_ul,
-#inp3:checked~.foot_ul,
-#inp4:checked~.foot_ul,
-#inp5:checked~.foot_ul,
-#inp6:checked~.foot_ul,
-#inp7:checked~.foot_ul,
-#inp8:checked~.foot_ul,
-#inp9:checked~.foot_ul,
-#inp10:checked~.foot_ul,
-#inp11:checked~.foot_ul {
-    max-height: 300px;
-}
-
-.fbtm{padding: 15px 0;}
-.foot_p, .fbtm p{
-    color: #000000bd;
-    font: .9em 'Arial', sans-serif;
-}
-.moreway{
-    font: .9em 'Arial', sans-serif;
-    color: #0071e3;
+    padding: 15px 20px;
+  }
+  .foot_ul {
+    max-height: 0;
+    overflow: hidden;
+    line-height: 1.5em;
+    transition: 0.3s;
+    margin: 0 0 0 20px;
+  }
+ 
+  .foot_ul li:nth-last-child(1) {
+    padding-bottom: 15px;
+  }
+  .toch:checked ~ .foot_ul {
+    max-height: 250px;
+  }
+  .moreway {
+    color: var(--blue);
     text-decoration: underline;
-}
-.bbottom{border-bottom: none;}
-
-@media only screen and (min-width: 768px) {
-    .container{
-        max-width: 1200px;
+  }
+  @media only screen and (min-width: 369px) {
+    .col {
+      width: 49%;
+    }
+  }
+@media only screen and (min-width:768px){
+    .container {
+        max-width: 1100px;
         margin: auto;
     }
-    .menu1{
-        gap: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
+    .fa-bars{
+        display: none;
     }
-    .menu1 a {
+    #nav{
+        display: flex;
+        justify-content: space-between;
+        font: 600 .7em 'Arial', sans-serif;
+        gap: 15px;
+        align-items: center;
+    }
+    #nav a {
         position: relative;
         padding: 5px 0;
-      }
-      .menu1 a::before {
+    }
+    #nav a::before {
         content: "";
         position: absolute;
         width: 0px;
@@ -573,211 +703,298 @@ ol{
         bottom: 0;
         background-color: #624d4d;
         transition: all ease-in-out 0.2s;
-      }
-      .menu1 a:hover::before {
+    }
+    #nav a:hover::before {
         width: 100%;
         left: 0;
-      }
-      .button:hover {
-        box-shadow: 3px 5px 7px #010e42;
-        transition: .4s;
-      }
-      .titan_sec .button:hover {
+    }
+    #tels{
+        border: none;
+        gap: 18px;  
+    }
+    #bg-black .button:hover {
         box-shadow: 3px 5px 7px rgb(172, 185, 236);
         transition: .2s;
-      }
-
-
-    .menu1 li a{
-        color: black;
-        font: bold .67em 'Arial', sans-serif;
     }
-    nav{
-    display: flex;
-    justify-content: space-around;
+    .button:hover {
+        box-shadow: 3px 5px 7px #010e42;
+        transition: .4s;
     }
-    .nav_inp label{display: none;}
-    .bgtitanium{
-        background: url('../img/titanium-pc.png') center/contain no-repeat;
-        width: 70%;
-        margin: auto;
+    .minip{
+        margin-top: 0px;
     }
-    .sec_div h2{font-size: 2.8em;}
-    .new{
-        height: 55vh;
-        background-size: cover;
-    }
-    .power_price{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .power{width: 50%;}
-    .phones{
-        height: 100vh;
-        width: 50%;
-    }
-    .power h1{font-size: 3em}
-    .bgapple{height: 100vh;}
-    .no_cont{
-        height: 100vh;
-        background: url('../img/applebg12.jpeg') center/cover no-repeat; 
-        border-radius: 30px;
-        margin: 20px;
-    }
-    .applebg{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .app_text{
-        text-align: left;
-        color: #fff;
-    }
-    .app_text h2{
-        margin: 20px 0;
-        font-size: 2.8em;
-    }
-    .app_text .watch{
-        padding: 8px 20px;
-        color: #000;
-        margin: 10px 0;
-        border-radius: 15px;
-        font: 0.8em 'Arial', sans-serif;
-        opacity: 95%;
-        background: #ffffffcc;
-        i{
-            display: none;
-        }
-    }
-    section h1{font: bold 3em 'Arial', sans-serif;}
-    .app_texts .text_span{font: bold 1.4em 'Arial', sans-serif;}
-    section h2{font: 500 2.8em 'Arial', sans-serif;}
-    .why{
-        height: 80vh;
-        background: url("../img/applebg6.jpeg") center/cover no-repeat;
-    }
-    .why div {
-        max-width: 500px;
-        margin: auto;
-    }
-    .whybg{display: none;}
-    .macsafe{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .macsafe_img{
-        width: 50%;
-        height: 60vh;
-    }
-    .macsafe_p h2{
-        font-size: 2.8em;
-    }
-    .featured h1{
-        width: 300px;
-        text-align: center;
-        margin: 30px auto;
-        padding: 20px;
-    }
-    .airtag{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .airtag_img{
-        width: 50%;
-        height: 60vh;
-    }
-    .airtag_p h2{
-        font-size: 2.8em;
-    }
-    .airtagbg{
-        order: -1;
-        background: url('../img/appleanahtarlik.jpeg') center/contain no-repeat;
-    }
-    .magicruns_img{
-        height: 50vh;
-    }
-    .magic_p h2{
-        font-size: 2.8em;
-    }
-    .all_art{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .ios_img{
-        background: url('../img/ios17.jpg') center/cover no-repeat;
-        height: 50vh;
-    }
-    .ios17 h5{font: 500 2.8em 'Arial', sans-serif;}
-    .two_cards{width: 50%;}
-    .newtwo_cards{width: 50%;}
-    .two_row{
-        display: flex;
-        flex-direction: row;
-    }
-    .applications{
-        background: url('../img/applebg2.jpeg')  center/contain no-repeat;
-        height: 55vh;
+    #titanimg{
+        background:url('../img/titanium-pc.png') center/contain no-repeat;
         width: 60%;
+        max-width: initial;
+        margin: initial;
+        margin-bottom: 30px;
+        
     }
-    .appleone{
-        display: flex;
-        align-items: center;
+    #imgsbg{
+        background: url('../img/newphoria.jpeg') center/cover;
+        height: 55vh;
     }
-    .introducing{
-        display: flex;
-        align-items: center;
+    #iphonesec2{
+        height: 100vh;
     }
-    .applications{order: -1;}
-    .one_apple{height: 50px;}
-    .newtwo_white{width: 50%;}
-    .introbg{
-        width: 50%;
-        height: 60vh;
+    #person_div{
+        background: url('../img/applebg12.jpeg') center/cover no-repeat;
+        height: 100vh;
+        border-radius: 30px;
     }
-    .introducing_p{width: 50%;}
-    .drop1 label, .drop2 label, .drop3 label, .drop4 label, .drop5 label, .drop6 label, .drop7 label, .drop8 label, .drop9 label, .drop10 label, .drop11 label{
-        font: 1.1em 'Arial', sans-serif;
-    }
-    .foot_menu {
+    #person_div{
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        .fa-chevron-down {
-          display: none;
-        }
-      }
-      .foot_ul{border-bottom: none;}
-      .w20{
-        width: 20%;
-        margin-bottom: 10px;
+        justify-content: start;
+        align-items: center;
+        text-align: left;
     }
-      .foot_ul{
-        max-height: 250px;
-      }
-      .whichs {
-        font: 3em 'Arial', sans-serif;
-      }
-     .fbtm {
-        display: flex;
-        justify-content: space-between;
-        text-align: center;
-        p {
-          padding: 0 5px;
-        }
-      } 
-      .appcard {
-        flex: 0 1 25%;
+    #uptext{display: none;}
+    #persontext{
+    display: table;    
+    color: #fff;
+    padding: 20px;
+    h2{
+        font: 1.4em 'Arial', sans-serif;
+        padding: 22px 0;
+    }
+    p{
+        font: 2.6em 'Arial', sans-serif;
+        line-height: 1.5em;
+        padding-bottom: 10px;
+    }
+    a{
+        display: inline-block;
+        color: #000;
+        font: .9em 'Arial', sans-serif;
+        padding: 7px 15px;
+        border-radius: 15px;
+        background-color:#e4dcd8;  
     }
 }
-@media only screen and (min-width: 950px) {
-    .row{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+.col{
+    width: 25%;
+    padding: 0 10px;
+  }
+.features_div hr {
+    width: 100%;
+}
+.col .zoom{
+    font: 600 1.4em 'Arial', sans-serif;
+}
+#bg_div h1{
+    font: 3em 'Arial', sans-serif;
+}
+#onecard_div{
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+.card{margin:0}
+.first{width:99%}
+.second{width:49%}
+.third{width:49%}
+#onecard_div{
+    text-align: center;
+    justify-content: center;
+  
+}
+#card_div h2{font-size: 2.8em;}
+
+.why_div{
+    background:url('../img/applebg6.jpeg') center/cover no-repeat;
+    height: 80vh;}
+#whyimgs{
+    background:url('../img/applebg9.jpeg') 65% 50%/contain no-repeat;
+    height: 50vh;
+    width: 90%;
+}
+.why{
+    margin:20px 20px 30px;
+    h1{
+        margin:auto;
+        font: 2.8em 'Arial', sans-serif;
+        max-width: 600px;
     }
-    .img_cards{width: 33.33%;}
+    p{  
+        font: 400 1em 'Arial', sans-serif;
+        margin:auto;
+        max-width: 500px;
+    }
+}
+
+#whybg_div{display: none;}
+#featured{ 
+    font: 3em 'Arial', sans-serif;
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+}
+.mac_div{
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    h2{
+        font: 2.8em 'Arial', sans-serif;
+    }
+}
+.txt_div{width:50%;}
+#macimg{
+    height: 60vh !important;
+    margin: 30px 0;
+    width: 50%;
+   
+}
+#keys{
+    order: -1;
+    height: 60vh !important;
+    margin: 30px 0;
+    width: 50%;
+}
+#fast_div{
+    flex-direction: row;  
+}
+.delivery_div{
+    width: 33%;
+    gap: 20px;
+}
+#ios17_div{
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 2%;
+    margin: 0 30px;
+}
+#sec4_div h1,#more h1{  font: 3em 'Arial', sans-serif;}
+.switching h2{  font: 2.8em 'Arial', sans-serif;}
+.switching4{
+    display: block !important;
+    order: -1;
+    width: 100%;
+}
+.switching2,.switching3{
+    width: 49%;
+    
+}
+.switching1{display:none !important;}
+#application_div{display: none;}
+#wh_div{
+    background-color: #fff;
+    padding: 60px 20px;
+    margin: 20px 0px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row ;
+    order: -1;
+}
+.dark_div{
+    width: 49%;
+    gap: 30px;
+}
+#blackimgleft{
+    display: inline-block;
+    background:url('../img/applebg2.jpeg') center/contain no-repeat;
+    height: 40vh;
+    width: 50%;
+}
+#text{
+    margin: auto;
+    width: 50%;
+    p{
+        font: 1.4em 'Arial', sans-serif;
+        padding: 20px 0;
+    }
+    img{
+        height: 40px;
+    }
+    a{
+        margin: 10px 5px
+    }
+}
+.dark_div p:first-child{  font: 2.8em 'Arial', sans-serif;}
+
+#white_div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2%;
+}
+.white_card{
+    width: 49%;
+    
+}
+#introducing{
+    height: 70vh;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0 30px 0 ;
+    h2{  font: 2.8em 'Arial', sans-serif;}
+}
+#introducing_p{width: 49%;}
+#introducingbg{width: 49%;}
+#footerbg{
+    font: .8em 'Arial', sans-serif;
+}
+.shop_a{width: 20%;}
+.shop_a li a, label a{
+    color: #000;
+    opacity: .6;
+}
+.footermenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    div {
+      border-bottom: none;
+    }
+    .fa-chevron-down {
+      display: none;
+    }
+  }
+  .foot_ul {
+    max-height: 250px;
+  }
+  label a {
+    font: 1.2em 'Arial', sans-serif;
+  }
+  .foot_btm {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    p {
+      padding: 0 5px;
+    }
+  }
+}
+@media only screen and (min-width:990px){
+    #sec2_div{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+    }
+    #iphonesec2{
+        height: 100vh;
+    }
+    #info_id{
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+       h1{
+        font: 3em 'Arial', sans-serif;
+       } 
+    }
+    #onecard_div{
+      gap: 30px;
+    }
+    .first{width: 31%}
+    .second{width: 31%}
+    .third{width: 31%}
 }
