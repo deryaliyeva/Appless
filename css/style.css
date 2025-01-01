@@ -6,6 +6,10 @@
     padding:0 3%;
 }
 .txtblack{color: #000;}
+.txtgray{
+    color: #000;
+    opacity: .6;
+}
 .bg-gray{
     background-color: var(--gray);
     text-align: center;
@@ -26,6 +30,7 @@ nav{
 .apple_logo{
     width: 15px;
 }
+
 #nav_div label{
     display:inline-block;
     padding:0;
